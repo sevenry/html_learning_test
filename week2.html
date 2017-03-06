@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    
+</head>
+
+<body>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <h2>请投给你支持的照片～
+    <br>
+    <br>
+    <img id="targetkk" src="01-002.jpg" width="174" height="142">
+    <!--<img src="prize.png" width="32" height="32" type="button" onclick="show_confirm()" title＝"please" />-->
+    <a href="http://127.0.0.1:5000?star=a"><img src="prize.png" width="32" height="32" type="button"  title＝"please" /></a>
+    <br>
+    <br>
+    <img id ="targetk" src="01-001.png" width="174" height="142">
+    <a href="http:127.0.0.1:5000?star=b"><input type="button" value="请投我吧～" />
+    
+        <script>
+        
+        function show_confirm()
+        {
+            var r=confirm("vote successfully");
+        }
+            var current = 0;
+            var cu =0
+            //console.log(document.getElementById('targetkk'))
+            document.getElementById('targetkk').onclick = function(){
+                console.log("targetkk running")
+                current = (current+90)%360;
+                this.style.transform = 'rotate('+current+'deg)';
+                console.log(this)
+            }
+            document.getElementById('targetk').onclick = function(){
+             
+                cu = (cu+90)%360;
+             
+                this.style.transform = 'rotate('+cu+'deg)';
+                console.log(this)
+            }
+        //};
+    </script>
+</body>
+</html>
